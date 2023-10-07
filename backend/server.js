@@ -5,7 +5,9 @@ const app = express();
 const port = 4000; // You can change the port number as needed
 
 // Middleware to enable CORS
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 
 // Middleware to parse JSON requests
 app.use(express.json());
