@@ -17,7 +17,7 @@ const App = () => {
   }, []);
 
   const getProduct = async () => {
-    let res = await fetch("https://inventory-management-blwd.vercel.app/get-products");
+    let res = await fetch("https://inventory-backend-u8wy.onrender.com/get-products");
     let data = await res.json();
 
     let value = data.map((item) => ({
@@ -43,7 +43,7 @@ const App = () => {
       };
 
       let res = await fetch(
-        "https://inventory-management-blwd.vercel.app/add-product",
+        "https://inventory-backend-u8wy.onrender.com/add-product",
         requestOptions
       );
 
@@ -67,7 +67,7 @@ const App = () => {
       method: "DELETE",
     };
     let res = await fetch(
-      `https://inventory-management-blwd.vercel.app/delete-product/${id}`,
+      `https://inventory-backend-u8wy.onrender.com/delete-product/${id}`,
       requestOptions
     );
     getProduct();
